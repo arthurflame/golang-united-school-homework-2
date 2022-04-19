@@ -30,7 +30,7 @@ func CalcSquare(sideLen float64, sidesNum smartType) float64 {
 	case 3:
 		thirdSideLen := sideLen
 		perimeter := (sideLen*2 + thirdSideLen) / 2
-		area := math.Sqrt(perimeter * (perimeter - sideLen))
+		area := math.Sqrt(perimeter * ((perimeter - sideLen) * (perimeter - sideLen) * (perimeter - thirdSideLen)))
 		return area
 	case 4:
 		return sideLen * sideLen
